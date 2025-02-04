@@ -12,10 +12,11 @@ Call the function with different ages and print the result.
 
 const checkAdult = (age) =>{
     if (age >= 18) {
-        return "You are an Adult";
+        console.log("YOU're an ADULT");
+        
     }
     else{
-       return  "Go back!";
+        console.log("YOU're an Bacha");
     }
 }
-console.log(checkAdult(50));
+console.log(checkAdult(12));
