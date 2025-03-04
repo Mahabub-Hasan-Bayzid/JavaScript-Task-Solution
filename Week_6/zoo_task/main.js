@@ -133,6 +133,20 @@ const animalList = document.querySelector('#animalList');
 const addAnimalbtn = document.querySelector('#addAnimal');
 const searchInput = document.querySelector('#searchAnimal');
 const sortAnimals = document.querySelector('#sortAnimals');
+const sortByType = document.querySelector('#filterType');
+
+const animalsArray = [
+  { name: "Fox", species: "Mammal", age: 4 },
+  { name: "Eagle", species: "Bird", age: 7 },
+  { name: "Shark", species: "Fish", age: 12 },
+  { name: "Elephant", species: "Mammal", age: 25 },
+  { name: "Crocodile", species: "Reptile", age: 50 },
+  { name: "Parrot", species: "Bird", age: 5 },
+  { name: "Tiger", species: "Mammal", age: 8 },
+  { name: "Dolphin", species: "Mammal", age: 20 },
+  { name: "Penguin", species: "Bird", age: 15 },
+  { name: "Kangaroo", species: "Mammal", age: 6 }
+];
 
 
 const displayAnimals = (animalArray)=>{
@@ -140,32 +154,47 @@ const displayAnimals = (animalArray)=>{
   
   for (const animal of animalArray) {
     const li = document.createElement('li');
-    li.textContent = (`${animal}`);
+    li.textContent = (`${animal.name} (${animal.species}) ${animal.age}`);
     animalList.appendChild(li);
   }
 }
 
 const addAnimal =()=>{
     const nameInput = document.querySelector('#newAnimalName').value.trim();
-    animalSimple.push(nameInput);
-    displayAnimals(animalSimple);
+    const speciesInput = document.querySelector('#newAnimalspecies').value.trim();
+    const ageInput = document.querySelector('#newAnimalAge').value.trim();
+    animalsArray.name.push(nameInput);
+    animalsArray.species.push(speciesInput);
+    animalsArray.age.push(ageInput);
+    displayAnimals(animalsArray);
     document.querySelector('#newAnimalName').value = '';
     
 }
 
 const searchHandler =()=>{
   const searchText = searchInput.value.toLowerCase();
-  const filteredAnimals = animalSimple.filter(animal => animal.toLocaleLowerCase().includes(searchText));
+  const filteredAnimals = animalsArray.filter(animal => animal.name.toLocaleLowerCase().includes(searchText));
   
   displayAnimals(filteredAnimals)
 }
 
-const sortAnimal= ()=>{
-  animalSimple.sort();
-  displayAnimals(animalSimple);
+// const sortAnimal= ()=>{
+//   const sortedanimals = animalsArray.sort();
+//   displayAnimals(sortedanimals);
+// }
+
+const sortAnimal = () => {
+  const sortedAnimals = [...animalsArray].sort((a, b) => a.name.localeCompare(b.name));
+  displayAnimals(sortedAnimals);
 }
+
+const typeHandler = ()=>{
+  const selectedType = sortByType.value;
+  
+}
+
 
 addAnimalbtn.addEventListener('click', addAnimal);
 searchInput.addEventListener('input', searchHandler);
-sortAnimals.addEventListener('click', sortAnimal)
-displayAnimals(animalSimple); 
+sortAnimals.addEventListener('click', typeHandler)
+displayAnimals(animalsArray); 

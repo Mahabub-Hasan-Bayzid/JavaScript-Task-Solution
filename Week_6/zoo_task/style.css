@@ -1,7 +1,7 @@
 /* General Page Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #9de8f0;
     text-align: center;
     margin: 0;
     padding: 20px;
@@ -12,7 +12,7 @@ body {
     width: 80%;
     max-width: 600px;
     margin: auto;
-    background: white;
+    background-color: #00e5ff;
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -48,22 +48,31 @@ body {
     background-color: #0056b3;
   }
   
-  /* Animal List */
-  #animalList {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  #animalList li {
-    background: #fff;
-    margin: 8px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+
+  /* Animal List - Grid Layout */
+#animalList {
+  list-style-type: none;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 Equal Columns */
+  gap: 8px; /* Space between cards */
+  justify-content: center;
+}
+
+/* Each Animal Card */
+#animalList li {
+  background: #fff;
+  width: 150px;  /* Set fixed width */
+  height: 150px; /* Set fixed height (square shape) */
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
   
   .remove-btn {
     background-color: #dc3545;
@@ -83,3 +92,5 @@ body {
     padding-top: 15px;
     border-top: 2px solid #ddd;
   }
+
+  
