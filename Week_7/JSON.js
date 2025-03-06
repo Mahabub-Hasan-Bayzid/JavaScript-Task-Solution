@@ -41,6 +41,8 @@ const classroom = [
     { name: "John", age: 22, grade: "C" }
   ];
   
+  const jsonClassroom = JSON.stringify(classroom);
+  console.log(jsonClassroom);
   
   
 
@@ -50,6 +52,9 @@ and log the names of all students in the classroom.
 */
 
 // Your code here
+const backTOclassRoom = JSON.parse(jsonClassroom);
+console.log(backTOclassRoom);
+
 
 /* Task 5
 Create an object named `weatherReport` with the following properties:
@@ -62,6 +67,16 @@ Then, parse the JSON string back into an object and log the `conditions` propert
 */
 
 // Your code here
+const weatherReport = {
+    temperature: 25,
+    humidity: 60,
+    conditions: "Sunny"
+  };
+  const weatherJSON= JSON.stringify(weatherReport);
+  const backtojjs= JSON.parse(weatherJSON);
+  console.log(backtojjs.conditions);
+  
+    
 
 /* Task 6
 Define an array named `movies`, where each movie has:
@@ -74,6 +89,25 @@ Log all movie titles with a rating higher than 8.
 */
 
 // Your code here
+const movies = [
+    { title: "Inception", director: "Christopher Nolan", rating: 9.0 },
+    { title: "Interstellar", director: "Christopher Nolan", rating: 8.6 },
+    { title: "The Shawshank Redemption", director: "Frank Darabont", rating: 9.3 },
+    { title: "The Godfather", director: "Francis Ford Coppola", rating: 9.2 }
+  ];
+  
+
+  function higherRating() {
+    const jsonMovies = JSON.stringify(movies);
+    const backtoMOvies= JSON.parse(jsonMovies);
+    backtoMOvies.forEach(movie => {
+        if (movie.rating >= 8) {
+            console.log(movie.title);
+            
+        }
+    });
+  }
+  higherRating();
 
 /* Task 7
 Write a function `filterHighRatedMovies(jsonString)` that:
@@ -83,6 +117,24 @@ Write a function `filterHighRatedMovies(jsonString)` that:
 */
 
 // Your code here
+const movies2 = [
+    { title: "Inception", director: "Christopher Nolan", rating: 9.0 },
+    { title: "Interstellar", director: "Christopher Nolan", rating: 8.6 },
+    { title: "The Shawshank Redemption", director: "Frank Darabont", rating: 9.3 },
+    { title: "The Godfather", director: "Francis Ford Coppola", rating: 9.2 }
+  ];
+const jsonMovies = JSON.stringify(movies2);
+function filterHighRatedMovies(jsonString) {
+    const covertJS= JSON.parse(jsonString);
+    covertJS.forEach(movie => {
+        if (movie.rating >= 8) {
+            console.log(movie.title);
+            
+        }
+    });
+}
+filterHighRatedMovies(jsonMovies)
+
 
 /* Task 8
 Define an object named `shoppingCart` with:
@@ -91,6 +143,18 @@ Convert `shoppingCart` into a JSON string and log it to the console.
 */
 
 // Your code here
+const shoppingCart = {
+    items: [
+      { name: "Laptop", price: 1200 },
+      { name: "Headphones", price: 200 },
+      { name: "Mouse", price: 50 },
+      { name: "Keyboard", price: 100 }
+    ]
+  };
+  const shoppingCartJson = JSON.stringify(shoppingCart);
+  console.log(shoppingCartJson);
+  
+  
 
 /* Task 9
 Write a function `totalCartValue(jsonString)` that:
@@ -100,6 +164,22 @@ Write a function `totalCartValue(jsonString)` that:
 */
 
 // Your code here
+const shoppingCart2 = [
+
+      { name: "Laptop", price: 1200 },
+      { name: "Headphones", price: 200 },
+      { name: "Mouse", price: 50 },
+      { name: "Keyboard", price: 100 },
+]
+const jsonShoppingCart = JSON.stringify(shoppingCart2)
+function totalCartValue(jsonString) {
+    const covertJS= JSON.parse(jsonString);
+    covertJS.forEach(element => {
+        console.log(element.price);
+        
+    });
+}
+totalCartValue(jsonShoppingCart);
 
 /* Task 10
 Create an object named `gameProgress` with:
@@ -113,3 +193,16 @@ Log the updated object.
 */
 
 // Your code here
+const gameProgress = {
+    level : 99,
+    score : 99999,
+    livesRemaining : 1,
+}
+
+const jsonGame = JSON.stringify(gameProgress);
+const parseGame = json.parse(jsonGame);
+parseGame.score += 100;
+console.log(parseGame);
+
+
+
