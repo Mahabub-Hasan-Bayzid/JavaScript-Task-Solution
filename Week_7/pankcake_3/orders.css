@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative:wght@400;700;900&family=Copse&family=Fauna+One&family=Playwrite+VN+Guides&family=Quicksand:wght@300..700&display=swap'); 
+
+.container {
+    max-width: 1200px; 
+    margin:  auto; 
+    padding: auto;
+}
+
+
+body{
+	background-color: #66003b;
+}
+.header {
+   text-align: center;
+}
+  
+
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 8px;
+	font-family: 'Cinzel Decorative',serif;
+	font-weight: 500;
+	font-style: normal;
+}
+
+.header h4 {
+    font-size: 19px;
+    margin-bottom: 16px;
+    font-weight: 400;
+}
+
+.btn {
+    padding: 13px 24px;
+    font-size: 16px;
+    background-color: #890251;
+    color: #fce0d1;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ec0684;
+}
+
+
+.content {
+	text-align: center;
+    padding: 32px;
+    background-color: #fce0d1;
+}
+
+.content h2 {
+	font-size: 32px;
+    margin-bottom: 32px;
+    font-weight: bold;
+	color: #66003b;
+	font-family: 'quicksand',serif;
+}
+
+/* Card Design is copied from codepen.io */
+
+.card-main {
+	display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+	color: #66003b;
+	font-family: 'quicksand',serif;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 24px;
+}
+.card p::first-letter {
+	color: #66003b;
+	font-size: 120%;
+  }
+
+   

@@ -8,6 +8,7 @@ const seeOrderButton = document.getElementById("seeOrder");
 const summaryText = document.querySelector("#summaryText");
 const customerName = document.querySelector("#customerName");
 
+
 const changeHandler = (event) => {
   console.log("Event: ", event);
   const basePrice = parseFloat(
@@ -60,3 +61,26 @@ seeOrderButton.addEventListener("click", () => {
 
   summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppingsText} ${extrasText}. Delivery fee: ${deliveryFee}€`;
 });
+
+// PANCAKE 03
+function generateRandomID() {
+  return Math.random().toString(36).substring(2, 15);
+}
+console.log(generateRandomID());
+
+
+function ordersArray  (id, customerName, selectedPancake, toppings, extras, deliveryMethod, totalPrice, status) {
+  return {
+    id: id,
+    customerName: customerName,
+    selectedPancake: selectedPancake,
+    toppings: toppings,
+    extras: extras,
+    deliveryMethod: deliveryMethod,
+    totalPrice: totalPrice,
+    status: status,
+  };
+}
+const orders = ()=>{
+
+} 

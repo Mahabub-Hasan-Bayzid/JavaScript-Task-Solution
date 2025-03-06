@@ -3,7 +3,7 @@
 body {
   font-family: "Nunito Sans", serif;
   /* background-color: #ffffff; */
-  background-color : #001126;
+  background-color : #045cb4;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ body {
   justify-content: center;
   width: 100vw;
 }
-
+  
 .image-container {
   position: relative;
   flex: 1;
@@ -68,4 +68,12 @@ select,
 label {
   display: block;
   margin-top: 10px;
+}
+
+.show_btn{
+  background-color:#d17b49;
+  padding: 7px;
+  color: #FFFFFF;
+
+
 }
