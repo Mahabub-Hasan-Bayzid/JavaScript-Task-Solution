@@ -4,11 +4,12 @@ const extras = document.querySelectorAll(".extra");
 const totalPriceDisplay = document.querySelector("#totalPriceDisplay");
 const totalPriceBanner = document.querySelector("#totalPrice");
 const pancakeForm = document.querySelector("#pancakeForm");
-const seeOrderButton = document.getElementById("seeOrder");
 const summaryText = document.querySelector("#summaryText");
 const customerName = document.querySelector("#customerName");
 
+const seeOrderButton = document.getElementById("seeOrder");
 const confirmBtn = document.querySelector('#confirmOrder');
+const displayOrders= document.getElementById('show_btn');
 
 
 const changeHandler = () => {
@@ -97,11 +98,12 @@ const orders = ()=>{
   allOrders.push(newOrder);
   localStorage.setItem("allOrders", JSON.stringify(allOrders));
 
-  const existOrders = JSON.parse(localStorage.getItem('allOrders'));
-  console.log(existOrders.name[5]);
-  
+  const existsOrders= JSON.parse(localStorage.getItem('allOrders'));
+  console.log(existsOrders);
+  alert('Order Created Successfully!')
   
 } 
 
 
 confirmBtn.addEventListener('click',orders);
+
