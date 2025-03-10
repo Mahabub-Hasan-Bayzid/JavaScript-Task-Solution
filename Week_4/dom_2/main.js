@@ -12,10 +12,10 @@ const inputFruit = document.querySelector('#fruitInput');
 const Fruitlist = document.querySelector('#fruitList');
 
 const newLi = ()=>{
-    const newItem = document.createElement('li');
-    newItem.textContent = inputFruit.value;
-    Fruitlist.appendChild(newItem); 
-    inputFruit.value= '';
+    let createLi= document.createElement('li');
+    createLi.textContent= inputFruit.value;
+    fruitList.appendChild(createLi);
+
 }
 
-button.addEventListener('click',newLi)
+button.addEventListener('click', newLi);

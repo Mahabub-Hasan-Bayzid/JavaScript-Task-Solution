@@ -13,4 +13,4 @@
     - [ ] loops
     - [x] 8_ball    
 - **week_04:**
-    - [x] dom   
+    - [] dom   

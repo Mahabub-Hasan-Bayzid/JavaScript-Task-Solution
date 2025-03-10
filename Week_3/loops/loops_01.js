@@ -4,12 +4,11 @@ Write a function named logOddNumbers:
 Example output in the console: 1, 3, 5, 7, ..., 99. 
 */
 
-const logOddNumbers = () =>{
-    for (i = 1;i< 100;i++){
-        if (i % 2 !== 0){
-            console.log(i);
-            
-        }
+const logOddNumbers= ()=>{
+    for ( i = 0; i < 100; i++) {
+        console.log(i);
+        
+        
     }
 }
-logOddNumbers()
+logOddNumbers();

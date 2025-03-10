@@ -14,4 +14,6 @@ const canEat = (isHungry,hasFood)=>{
         return "You need to find food!";
     }
 }
-console.log(canEat());
+
+console.log(canEat(true, true)); 
+console.log(canEat(false, true)); 
