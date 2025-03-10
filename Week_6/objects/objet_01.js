@@ -163,9 +163,9 @@ Write a function `findOldestCar` that takes an array of car objects and returns 
 
 // Your code here
 const findOldestCar = ()=>{
-    const oldestCar = 0;
+    const oldestCar = cars[0];
     cars.forEach(car=>{
-        if (car.year < oldestCar) {
+        if (car.year < oldestCar.year) {
             console.log(car.brand);
         }
     })

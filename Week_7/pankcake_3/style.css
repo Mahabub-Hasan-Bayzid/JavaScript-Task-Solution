@@ -3,7 +3,7 @@
 body {
   font-family: "Nunito Sans", serif;
   /* background-color: #ffffff; */
-  background-color : #045cb4;
+  background-color : #2a8d8c;
   color: #FFFFFF;
   display: flex;
   justify-content: center;
@@ -72,8 +72,23 @@ label {
 
 .show_btn{
   background-color:#d17b49;
-  padding: 7px;
+  
   color: #FFFFFF;
 
 
+}
+.button{
+  padding: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 3px;
+  margin: 0;
+  border: 0;
+}
+#seeOrder {
+  background-color: rgb(238, 238, 115);
+}
+
+#confirmOrder{
+  background-color: rgb(2, 201, 2);
 }

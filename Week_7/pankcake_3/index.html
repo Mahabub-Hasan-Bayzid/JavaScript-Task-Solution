@@ -11,7 +11,7 @@
         <img src="https://images.unsplash.com/photo-1564875197268-d336949dc1a9?q=80&w=2486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Delicious pancakes" />
         <div class="price-banner"><span id="totalPrice">5€</span></div>
       </div>
-        <button class="show_btn"><a href="order_list.html">Show Orders</a></button>
+        <button class="button" id="show_btn"><a href="order_list.html">Show Orders</a></button>
       <div class="form-container">
         <h2>Customize Your Pancake</h2>
 
@@ -86,7 +86,8 @@
           <h3>Total Price: <span id="totalPriceDisplay">5€</span></h3>
 
           <!-- See Order Button -->
-          <button type="button" id="seeOrder">See Order</button>
+          <button type="button" class="button" id="seeOrder">See Order</button>
+          <button type="button" class="button" id="confirmOrder">Confirm Order</button>
         </form>
 
         <!-- Order Summary Display -->
@@ -97,5 +98,6 @@
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

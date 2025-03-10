@@ -8,9 +8,10 @@ const seeOrderButton = document.getElementById("seeOrder");
 const summaryText = document.querySelector("#summaryText");
 const customerName = document.querySelector("#customerName");
 
+const confirmBtn = document.querySelector('#confirmOrder');
 
-const changeHandler = (event) => {
-  console.log("Event: ", event);
+
+const changeHandler = () => {
   const basePrice = parseFloat(
     document.getElementById("type").selectedOptions[0].dataset.price
   );
@@ -44,9 +45,7 @@ seeOrderButton.addEventListener("click", () => {
   const deliveryFee = deliveryChecked ? deliveryChecked.dataset.price : "0";
 
   // Get selected toppings
-  const selectedToppings = [...document.querySelectorAll(".topping:checked")]
-    .map((topping) => topping.value)
-    .join(", ");
+  const selectedToppings = [...document.querySelectorAll(".topping:checked")].map(topping => topping.nextSibling.textContent.trim());
 
   // Get selected extras
   const selectedExtras = [...document.querySelectorAll(".extra:checked")]
@@ -57,30 +56,52 @@ seeOrderButton.addEventListener("click", () => {
   const toppingsText = selectedToppings
     ? `with ${selectedToppings}`
     : "with no toppings";
+    
   const extrasText = selectedExtras ? `and ${selectedExtras}` : "and no extras";
 
   summaryText.textContent = `Order created by ${customerName.value} for ${pancakeType.value} ${toppingsText} ${extrasText}. Delivery fee: ${deliveryFee}€`;
 });
 
 // PANCAKE 03
-function generateRandomID() {
-  return Math.random().toString(36).substring(2, 15);
-}
-console.log(generateRandomID());
 
 
-function ordersArray  (id, customerName, selectedPancake, toppings, extras, deliveryMethod, totalPrice, status) {
-  return {
-    id: id,
-    customerName: customerName,
-    selectedPancake: selectedPancake,
-    toppings: toppings,
-    extras: extras,
-    deliveryMethod: deliveryMethod,
-    totalPrice: totalPrice,
-    status: status,
-  };
-}
+
 const orders = ()=>{
 
+  const order_id= Date.now();
+  const name= customerName.value;
+  const selectedPancake = pancakeType.value;
+  const selectedToppings = [...document.querySelectorAll(".topping:checked")].map(topping => topping.nextSibling.textContent.trim());
+  const selectedExtras = [...document.querySelectorAll(".extra:checked")].map(extra => extra.nextSibling.textContent.trim());
+  const deliveryMethod = document.querySelector('[name="delivery"]:checked').nextSibling.textContent.trim();
+  const totalPrice = totalPriceDisplay.textContent;
+
+  class OrdersArray {
+    constructor(id, customerName, selectedPancake, toppings, extras, deliveryMethod, totalPrice, status) {
+      this.id= id;
+      this.customerName= customerName;
+      this.selectedPancake= selectedPancake;
+      this.toppings= toppings;
+      this.extras= extras;
+      this.deliveryMethod= deliveryMethod;
+      this.totalPrice= totalPrice;
+      this.status= status;
+    }
+  }
+
+  
+  const newOrder = new OrdersArray(order_id, name, selectedPancake, selectedToppings, selectedExtras, deliveryMethod, totalPrice, "waiting");
+
+  let allOrders = JSON.parse(localStorage.getItem("allOrders")) || [];
+
+  allOrders.push(newOrder);
+  localStorage.setItem("allOrders", JSON.stringify(allOrders));
+
+  const existOrders = JSON.parse(localStorage.getItem('allOrders'));
+  console.log(existOrders.name[5]);
+  
+  
 } 
+
+
+confirmBtn.addEventListener('click',orders);
