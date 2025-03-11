@@ -7,6 +7,9 @@ const pancakeForm = document.querySelector("#pancakeForm");
 const summaryText = document.querySelector("#summaryText");
 const customerName = document.querySelector("#customerName");
 
+const overlay = document.querySelector('.overlay');
+const closeButton= document.querySelector('.modal button')
+
 const seeOrderButton = document.getElementById("seeOrder");
 const confirmBtn = document.querySelector('#confirmOrder');
 const displayOrders= document.getElementById('show_btn');
@@ -104,6 +107,19 @@ const orders = ()=>{
   
 } 
 
+const showOrderList =()=>{
+  overlay.classList.toggle('hidden');
+
+  // const existsOrders= JSON.parse(localStorage('allOrders'));
+  // console.log(existsOrders);
+  
+}
+
+const closeElement=()=>{
+  overlay.classList.toggle('hidden')
+}
 
 confirmBtn.addEventListener('click',orders);
+displayOrders.addEventListener('click',showOrderList);
+closeButton.addEventListener('click', closeElement);
 

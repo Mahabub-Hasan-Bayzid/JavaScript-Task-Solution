@@ -246,6 +246,16 @@ Write a function that logs `"This fox is young"` if its age is under 3, `"This f
 
 // Your code here
 
+const fox ={
+    name: 'XYZ',
+    age: 8,
+    habitat: 'something',
+}
+function foxFunction() {
+    
+    
+}
+
 
 /* Task 15
 Define an array named `employees`, where each employee has `name`, `position`, and `salary`.
