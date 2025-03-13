@@ -92,17 +92,29 @@ const showOrderList = () => {
             <p><strong>Toppings:</strong> ${order.toppings.join(", ") || "None"}</p>
             <p><strong>Extras:</strong> ${order.extras.join(", ") || "None"}</p>
             <p><strong>Delivery:</strong> ${order.deliveryMethod}</p>
-            <p><strong>Total:</strong> ${order.totalPrice}</p>
-            <p><strong>Status:</strong> ${order.status}</p>
+            <p id="price_"><strong>Total:</strong> ${order.totalPrice}</p>
+            <select class= "status">
+            <option value="default">${order.status}</option>
+            <option value="queue">IN Queue</option>
+            <option value="complete">Completed</option>
+            </select>
+
         `;
         cardMain.appendChild(card);
     });
 };
 
+const selecTstatus = document.querySelector('#price_');
+const statusUpdate =()=>{
+    console.log('changed');
+} 
+
+
 const closeElement = () => {
     overlay.classList.add("hidden");
 };
 
+// selecTstatus.addEventListener("click", statusUpdate)
 confirmBtn.addEventListener("click", orders);
 displayOrders.addEventListener("click", showOrderList);
 closeModalButton.addEventListener("click", closeElement);
