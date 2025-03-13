@@ -92,3 +92,41 @@ label {
 #confirmOrder{
   background-color: rgb(2, 201, 2);
 }
+
+.overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.544);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+  display: block;
+  position: relative;
+  background-color: aliceblue;
+  height: 60vw;
+  width: 60vh;
+  margin-top: 15%;
+
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 40px;
+  color: black;
+}
+.modal button{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background-color: aquamarine;
+}
+
+.hidden{
+  display: none;
+}
+
+
