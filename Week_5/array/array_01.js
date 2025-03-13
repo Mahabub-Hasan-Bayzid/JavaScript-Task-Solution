@@ -22,3 +22,62 @@ let teamMembers = ['John', 'Emily', 'Mike', 'Sarah'];
 18. Check if all names in the array have more than three letters. 
 */
 
+<<<<<<< HEAD
+=======
+// Task 01
+let teamMembers = ['John', 'Emily', 'Mike', 'Sarah'];
+
+teamMembers.forEach(members => {
+    console.log(members);
+    
+});
+
+// Task 02
+    teamMembers.shift();
+    console.log('Removed First member: ',teamMembers);
+
+// Task 03
+    teamMembers.pop();
+    console.log('Removed Last member: ',teamMembers);
+
+// Task 04
+    teamMembers.unshift('Alex');
+    console.log('Added member in the begaining: ',teamMembers);
+
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+
+// Task 06
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+// Task 05
+    teamMembers.push('Linda');
+    console.log('Added member in the last: ',teamMembers);
+
+>>>>>>> 676da5ebddf89d9ec869e495a35ac5737d5d78cf
