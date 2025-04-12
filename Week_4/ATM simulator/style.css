@@ -1,0 +1,57 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f1f1;
+    padding: 20px;
+    max-width: 400px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h2 {
+    text-align: center;
+  }
+  .atm-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  input {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  button {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  #message {
+    color: red;
+    margin-top: 10px;
+    text-align: center;
+  }
+  #login-section {
+    margin-bottom: 20px;
+  }
+  #atm-section {
+    display: none;
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple ATM Simulator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Simple ATM</h2>
+
+  <div class="atm-box">
+
+   
+    <div id="login-section">
+      <input type="password" id="pinInput" placeholder="Enter your 4-digit PIN">
+      <button onclick="checkPin()">Login</button>
+    </div>
+
+   
+    <div id="atm-section">
+      <h3>Balance: $<span id="balance">0</span></h3>
+
+      <input type="number" id="depositAmount" placeholder="Enter amount to deposit">
+      <button onclick="depositMoney()">Deposit</button>
+
+      <input type="number" id="withdrawAmount" placeholder="Enter amount to withdraw">
+      <button onclick="withdrawMoney()">Withdraw</button>
+
+      <p id="message"></p>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
