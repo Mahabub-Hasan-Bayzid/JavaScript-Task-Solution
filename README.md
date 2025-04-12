@@ -22,15 +22,15 @@
 - **week_06:**
     - [x] little zoo
     - [x] objects
-   - **week_07:**
+- **week_07:**
     - [x] pancake step 03
 - **week_08:**
     - [x] JS writing practices
-    - [ ] error handling
-    - [ ] fault-finding
+    - [] error handling
+    - [] fault-finding
     - **week_09:**
     - [x] async
-    - [ ] chaining
-    - [ ] destructuring 
-    - [ ]spread rest 
+    - [] chaining
+    - [] destructuring 
+    - [] spread rest 
 
